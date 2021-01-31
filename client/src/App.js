@@ -81,42 +81,42 @@ class App extends Component {
     super(props);
     this.state = {
       category: [
-        { selected: 1, color: 'forestgreen' },
+        { selected: 0, color: 'forestgreen' },
         { selected: 1, color: 'red' },
         { selected: 1, color: '#F8C146' },
         { selected: 1, color: 'blue' },
         { selected: 1, color: '#0B472B' },
         { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' },
-        { selected: 1, color: 'red' },
-        { selected: 1, color: '#F8C146' },
-        { selected: 1, color: 'blue' },
-        { selected: 1, color: '#0B472B' },
-        { selected: 1, color: 'forestgreen' }
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' },
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' },
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' },
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' },
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' },
+        { selected: 0, color: 'red' },
+        { selected: 0, color: '#F8C146' },
+        { selected: 0, color: 'blue' },
+        { selected: 0, color: '#0B472B' },
+        { selected: 0, color: 'forestgreen' }
       ],
       data: {
         active: 0,
@@ -353,7 +353,9 @@ class App extends Component {
               {/* Sidebar navigation*/}
               <nav className='sidebar-nav'>
                 <ul aria-expanded='false' className='collapse first-level in'>
-                  {Category.map((category, index) => {
+                  {
+                  Category.map((category, index) => {
+                    if(index<=6 && index!=0){
                     return (
                       <Categories
                         Category={category.category}
@@ -364,6 +366,7 @@ class App extends Component {
                         category={this.state.category}
                       ></Categories>
                     );
+                  }
                   })}
                 </ul>
               </nav>

@@ -102,13 +102,13 @@ export default class Graph extends Component {
          console.log(error);
       });
   }
-  // showDetails=() => {
-  // this.setState({popupInfo: true});
-  // }
+  showDetails=() => {
+  this.setState({popupInfo: true});
+  }
 
-  // hideDetails= ()=> {
-  // this.setState({popupInfo: null});
-  // }
+  hideDetails= ()=> {
+  this.setState({popupInfo: null});
+  }
   popup = index => {
 
     const array = this.state.display;
