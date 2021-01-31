@@ -1,0 +1,5 @@
+{
+  "mongoURL": "mongodb+srv://aashrayproject:enactusnsutcovidproject@cluster0-eekx3.mongodb.net/test?retryWrites=true&w=majority",
+  "mongoURLLocal":"mongodb://localhost/ostproject",
+  "emailSecret": "secretisnomoreasecret"
+}

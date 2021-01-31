@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:site_name" content="project-aashray.herokuapp.com">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Covid BIZMAP | Enactus NSUT">
+    <meta property="og:description" content="Featuring All COVID-19 Projects and supports in India with their contact details">
+    <meta property="og:url" content="project-aashray.herokuapp.com">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image" content="preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@enactusnsut">
+    <meta name="twitter:site:id" content="@enactusnsut">
+    <meta name="twitter:creator" content="@enactusnsut">
+    <meta name="twitter:image" content="preview.jpg">
+    <meta name="twitter:title" content="Covid Bizmap | Enactus NSUT | Featuring All COVID-19 Projects and supports in India with their contact details">
+    <meta name="twitter:url" content="project-aashray.herokuapp.com">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Covid Bizmap | Enactus NSUT | Featuring All COVID-19 Projects and supports in India with their contact details" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+    <link href="mapboxgl.css" rel="stylesheet" />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/themify-icons.css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <style>
+      .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        position: absolute;
+        z-index: 1000;
+      }
+      .floating-button {
+        z-index: 1000;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+      }
+      .nikhil {
+        background: -webkit-linear-gradient(
+          top left,
+          #405de6,
+          #5851db,
+          #833ab4,
+          #c13584,
+          #e1306c,
+          #fd1d1d,
+          #f56040,
+          #f77737,
+          #fcaf45,
+          #ffdc80
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* #loading {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        display: block;
+        z-index: 99;
+      } */
+
+      .Boton {
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        place-items: center;
+        margin: auto;
+        transform: translate(-50%, 0%);
+        z-index: 100;
+        left: 50%;
+      }
+    </style>
+    <script></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="canonical"
+      href="https://www.wrappixel.com/templates/xtremeadmin/"
+    /> -->
+    <!-- Custom CSS -->
+    <link
+      href="./BIZMAP/chartist.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./BIZMAP/c3.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link
+      href="./BIZMAP/style.min.css"
+      rel="stylesheet"
+    />
+    <title>COVID MAP </title>
+    <!-- <link href="bluelogo.png" rel="icon" /> -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+
+    <script src="./BIZMAP/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="./BIZMAP/popper.min.js"></script>
+    <script src="./BIZMAP/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="./BIZMAP/app.min.js"></script>
+    <script src="./BIZMAP/app.init.js"></script>
+    <script src="./BIZMAP/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="./BIZMAP/perfect-scrollbar.jquery.min.js"></script>
+    <script src="./BIZMAP/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="./BIZMAP/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="./BIZMAP/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="./BIZMAP/feather.min.js"></script>
+    <script src="./BIZMAP/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="./BIZMAP/chartist.min.js"></script>
+    <script src="./BIZMAP/chartist-plugin-tooltip.min.js"></script>
+    <!--c3 charts -->
+    <script src="./BIZMAP/d3.min.js"></script>
+    <script src="./BIZMAP/c3.min.js"></script>
+    <!--chartjs -->
+    <script src="./BIZMAP/Chart.min.js"></script>
+    <script src="./BIZMAP/dashboard1.js"></script>
+  </body>
+</html>

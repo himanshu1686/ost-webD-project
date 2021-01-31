@@ -1,0 +1,35 @@
+{
+  "name": "bizmap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \" npm run server \" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "googleapis": "^49.0.0",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3",
+    "path": "^0.12.7",
+    "react-addons-update": "^15.6.2",
+    "react-ga": "^2.7.0",
+    "react-responsive-modal": "^5.0.2",
+    "react-router-dom": "^5.1.2",
+    "read-excel-file": "^4.0.6"
+  }
+}
