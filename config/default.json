@@ -1,4 +1,3 @@
 {
-  "mongoURLLocal":"mongodb://localhost/ostproject",
-  "emailSecret": "secretisnomoreasecret"
+  "mongoURLLocal":"mongodb://localhost/ostproject"
 }

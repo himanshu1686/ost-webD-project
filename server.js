@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
- const cors = require('cors');
+const cors = require('cors');
 
 const server = require('http').createServer(app);
 
@@ -37,9 +37,9 @@ app.use(bodyParser.json());
 
  app.use(cors());
 
-app.use('/bizmap', require('./routes/bizmap/bizmap'));
+// app.use('/bizmap', require('./routes/bizmap/bizmap'));
 app.use('/graph', require('./routes/map/map'));
-app.use('/add_data', require('./routes/bulk/bulk'));
+//app.use('/add_data', require('./routes/bulk/bulk'));
 
 //Only for production, doesn't matter, don't delete this
 //Serve static assets if in production

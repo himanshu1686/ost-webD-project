@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Graph from './Graph';
-import { DiscussionForum } from './DiscussionForum';
 import { ActiveCases } from './ActiveCases';
 import { Twitter } from './Twitter';
 import Categories from './Categories';
-import Modal from './Modal';
 import axios from 'axios';
 import { whitesmoke } from 'color-name';
-import { Footer } from './Footer';
 import $ from 'jquery';
 import Button from 'react-bootstrap/Button';
 import Boostrapmodal from 'react-bootstrap/Modal';
@@ -208,10 +205,7 @@ class App extends Component {
           data-header-position='fixed'
           data-boxed-layout='full'
         >
-          {/* {// console.log(this.state.data)} */}
-          {/* ============================================================== */}
-          {/* Topbar header - style you can find in pages.scss */}
-          {/* ============================================================== */}
+         
           <header className='topbar' data-navbarbg='skin1'>
             <nav
               className='navbar top-navbar navbar-expand-md navbar-dark'
@@ -222,7 +216,6 @@ class App extends Component {
                 data-logobg='skin6'
                 style={{ backgroundColor: '#46b7f5' }}
               >
-                {/* This is for the sidebar toggle which is visible on mobile only */}
                 <a
                   className='nav-toggler waves-effect waves-light d-block d-md-none'
                   href='javascript:void(0)'
@@ -232,15 +225,14 @@ class App extends Component {
                 <a className='navbar-brand' href='#home'>
                   {/* Logo icon */}
                   <b className='logo-icon'>
-                    {/*You can put here icon as well // <i class="wi wi-sunset"></i> //*/}
-                    {/* Dark Logo icon */}
+                    
                     <img
                       style={{ height: '20px' }}
                       src='newlogo2.png'
                       alt='homepage'
                       className='dark-logo'
                     />
-                    {/* Light Logo icon */}
+
                     <img
                       style={{ height: '20px' }}
                       src='newlogo.png'
@@ -248,23 +240,9 @@ class App extends Component {
                       className='light-logo'
                     />
                   </b>
-                  {/*End Logo icon */}
-                  {/* Logo text */}
+                
                   <span className='logo-text'>
-                    {/* dark Logo text */}
-                    {/* <img
-                      style={{ height: '15px' }}
-                      src='logotext.png'
-                      alt='homepage'
-                      className='dark-logo'
-                    /> */}
-                    {/* Light Logo text */}
-                    {/* <img
-                      style={{ height: '15px' }}
-                      src='logotext.png'
-                      className='light-logo'
-                      alt='homepage'
-                    /> */}
+                    
                     SHEILD
                   </span>
                 </a>
@@ -280,18 +258,14 @@ class App extends Component {
                   <i className='fa fa-plus' style={{ color: 'white' }} />
                 </a>
               </div>
-              {/* ============================================================== */}
-              {/* End Logo */}
-              {/* ============================================================== */}
+       
               <div
                 className='navbar-collapse collapse'
                 id='navbarSupportedContent'
                 data-navbarbg='skin1'
                 style={{ backgroundColor: '#46b7f5' }}
               >
-                {/* ============================================================== */}
-                {/* toggle and nav items */}
-                {/* ============================================================== */}
+                
                 <ul className='navbar-nav float-left mr-auto'>
                   <li className='nav-item d-none d-md-block'>
                     <a
@@ -302,48 +276,27 @@ class App extends Component {
                       <i className='fas fa-bars' style={{ color: 'white' }} />
                     </a>
                   </li>
-                  {/* ============================================================== */}
-                  {/* Search */}
-                  {/* ============================================================== */}
+           
                   <li className='nav-item search-box'>
                     {' '}
-                    {/* <div style={{marginTop: '0px', paddingTop: '0px', textAlign: 'center'}}> */}
                     <a
                       className='nav-link waves-effect waves-light'
                       href='javascript:void(0)'
                       data-toggle='modal'
                       data-target='#exampleModal'
                     >
-                      Want to be featured on Our Site?
+                      We Hope you had fun visiting our site .
                     </a>
-                    {/* </div> */}
-                    {/* <div style={{marginTop: '0px', paddingTop: '0px', textAlign: 'center'}}> */}
-                    {/* <a
-                    className='nav-link waves-effect waves-light'
-                    href='javascript:void(0)'
-                    data-toggle="modal" data-target="#exampleModal"
-                  >
-                    Volunteer Form
-                  </a>
-                    </div> */}
+                   
                   </li>
-                  {/* ============================================================== */}
-                  {/* Volunteer Form Trigger */}
-                  {/* ============================================================== */}
+                  
                 </ul>
-                {/* ============================================================== */}
-                {/* Right side toggle and nav items */}
-                {/* ============================================================== */}
+                
                 <ul className='navbar-nav float-right'></ul>
               </div>
             </nav>
           </header>
-          {/* ============================================================== */}
-          {/* End Topbar header */}
-          {/* ============================================================== */}
-          {/* ============================================================== */}
-          {/* Left Sidebar - style you can find in sidebar.scss  */}
-          {/* ============================================================== */}
+          
           <aside className='left-sidebar' data-sidebarbg='skin6'>
             {/* Sidebar scroll*/}
             <div
@@ -435,27 +388,14 @@ class App extends Component {
               </div>
             </div>
     
-            {/* ============================================================== */}
-            {/* End Bread crumb and right sidebar toggle */}
-            {/* ============================================================== */}
-            {/* ============================================================== */}
-            {/* Container fluid  */}
-            {/* ============================================================== */}
+            
             <div className='container-fluid'>
-              {/* ============================================================== */}
-              {/* Sales chart */}
-              {/* ============================================================== */}
+              
               <div className='row'>
                 <Graph category={this.state.category}></Graph>
               </div>
-              {/* ============================================================== */}
-              {/* Sales chart */}
-              {/* ============================================================== */}
-              {/* ============================================================== */}
-              {/* Email campaign chart */}
-              {/* ============================================================== */}
+              
               <div className='row' style={{ marginTop: '20px' }}>
-                {/* <DiscussionForum></DiscussionForum> */}
                 <ActiveCases data={this.state.data}></ActiveCases>
               </div>
 
@@ -463,23 +403,12 @@ class App extends Component {
                 <Twitter></Twitter>
               </div>
             </div>
-            {/* ============================================================== */}
-            {/* End Container fluid  */}
-            {/* ============================================================== */}
-            {/* ============================================================== */}
-            {/* footer */}
-            {/* ============================================================== */}
-            {/* <Footer></Footer> */}
-            {/* ============================================================== */}
-            {/* End footer */}
-            {/* ============================================================== */}
+           
           </div>
-          {/* ============================================================== */}
-          {/* End Page wrapper  */}
-          {/* ============================================================== */}
+          
         </div>
 
-        <Modal />
+        
       </div>
     );
   }
