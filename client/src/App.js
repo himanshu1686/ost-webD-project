@@ -434,34 +434,7 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div
-              className='floating-button
-             wow fadeIn
-            '
-              style={{ fontSize: '100' }}
-            >
-              {/* <Link to='/add_options'> */}
-              <button
-                type='button'
-                data-toggle='modal'
-                data-target='#exampleModal'
-                className='btn'
-                style={{
-                  borderRadius: '50%',
-                  backgroundColor: '#46b7f5',
-                  fontSize: '30px',
-                  width: '55px',
-                  height: '55px'
-                }}
-              >
-                <i
-                  className='fa fa-plus'
-                  style={{ color: 'white' }}
-                  aria-hidden='true'
-                ></i>
-              </button>
-              {/* </Link> */}
-            </div>
+    
             {/* ============================================================== */}
             {/* End Bread crumb and right sidebar toggle */}
             {/* ============================================================== */}
