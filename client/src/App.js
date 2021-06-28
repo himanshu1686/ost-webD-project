@@ -243,7 +243,7 @@ class App extends Component {
                 
                   <span className='logo-text'>
                     
-                    SHEILD
+                    SHIELD
                   </span>
                 </a>
                 <a
